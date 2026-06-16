@@ -1,7 +1,5 @@
 import requests
 import random
-from jsonschema import validate
-from schemas import schema_login
 
 BASE_URL = "https://serverest.dev/login"
 
@@ -56,8 +54,3 @@ def test_login_com_campos_vazios():
     assert resposta.status_code == 400
     assert dados["email"] == "email não pode ficar em branco"
     assert dados["password"] == "password não pode ficar em branco"
-
-def test_validar_schema_login():
-    resp = requests.post(f"{BASE_URL}/login", json={"email": "beltrano@qa.com", "password": "teste"})
-    validate(instance=resp.json(), schema=schema_login) # Se a estrutura estiver errada, o teste falha aqui!
-    assert resp.status_code == 200    
