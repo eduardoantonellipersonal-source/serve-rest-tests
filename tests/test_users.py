@@ -1,5 +1,7 @@
 import requests
 import uuid
+from jsonschema import validate
+from schemas import schema_usuario
 
 # URL base
 BASE_URL = "https://compassuol.serverest.dev/usuarios"
@@ -195,3 +197,12 @@ def test_tentar_excluir_usuario_inexistente():
     # O ServeRest retorna 200 mesmo quando não deleta nada, mas a mensagem muda
     assert resposta.status_code == 200
     assert dados["message"] == "Nenhum registro excluído"                
+
+def test_validar_schema_usuario():
+    # ... código do request ...
+    resp = requests.post(...)
+    
+    # Valida usando o schema que está no arquivo schemas.py
+    validate(instance=resp.json(), schema=schema_usuario)
+    
+    assert resp.status_code == 201 
