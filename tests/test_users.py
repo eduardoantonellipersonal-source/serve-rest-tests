@@ -42,7 +42,7 @@ def test_cadastrar_usuario_valido_com_sucesso():
     resposta = requests.post(BASE_URL, json=payload)
     dados = resposta.json()
 
-    # 3. ASSERTS
+    # 3. ASSERTS 
     # Verifica se a API respondeu com 201 (Created - Criado com sucesso)
     assert resposta.status_code == 201
     
