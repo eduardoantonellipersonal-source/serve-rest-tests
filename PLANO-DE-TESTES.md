@@ -39,12 +39,12 @@ Garantir a qualidade e estabilidade da API ServeRest, validando regras de negóc
 
 ### Endpoint `/produtos`
 
-- [ ] Listar produtos
-- [ ] Cadastrar produto com token de admin
-- [ ] Cadastrar produto sem token de admin
-- [ ] Buscar produto por ID
-- [ ] Atualizar produto
-- [ ] Excluir produto
+- [x] Listar produtos
+- [x] Cadastrar produto com token de admin
+- [x] Cadastrar produto sem token de admin
+- [x] Buscar produto por ID
+- [x] Atualizar produto
+- [x] Excluir produto
 
 ## 5. Critérios de Qualidade
 
